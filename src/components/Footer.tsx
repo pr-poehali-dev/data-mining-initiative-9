@@ -9,6 +9,9 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Студия осознанных практик в Твери. Йога, медитации, МФР, пилатес и психология.
             </p>
+            <p className="text-sm text-muted-foreground mt-3">
+              ул. Луначарского, д. 9, корп. 1
+            </p>
           </div>
 
           {/* Navigation */}

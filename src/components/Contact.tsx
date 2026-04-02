@@ -59,8 +59,8 @@ export function Contact() {
               }`}
             >
               <div>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Город</p>
-                <p className="text-foreground">Тверь</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Адрес</p>
+                <p className="text-foreground">Тверь, ул. Луначарского, д. 9, корп. 1</p>
               </div>
               <div>
                 <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Формат</p>
