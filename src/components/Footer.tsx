@@ -12,6 +12,9 @@ export function Footer() {
             <p className="text-sm text-muted-foreground mt-3">
               ул. Луначарского, д. 9, корп. 1
             </p>
+            <a href="tel:+79036949868" className="text-sm text-muted-foreground mt-1 hover:text-sage transition-colors block">
+              +7 903 694-98-68
+            </a>
             <p className="text-sm text-muted-foreground mt-1">
               Ежедневно, 7:00 — 22:00
             </p>

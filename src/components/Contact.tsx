@@ -59,6 +59,12 @@ export function Contact() {
               }`}
             >
               <div>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Телефон</p>
+                <a href="tel:+79036949868" className="text-foreground hover:text-sage transition-colors">
+                  +7 903 694-98-68
+                </a>
+              </div>
+              <div>
                 <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Адрес</p>
                 <p className="text-foreground">Тверь, ул. Луначарского, д. 9, корп. 1</p>
               </div>
