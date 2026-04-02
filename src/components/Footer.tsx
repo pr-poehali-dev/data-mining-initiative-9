@@ -12,6 +12,9 @@ export function Footer() {
             <p className="text-sm text-muted-foreground mt-3">
               ул. Луначарского, д. 9, корп. 1
             </p>
+            <p className="text-sm text-muted-foreground mt-1">
+              Ежедневно, 7:00 — 22:00
+            </p>
           </div>
 
           {/* Navigation */}

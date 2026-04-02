@@ -63,6 +63,10 @@ export function Contact() {
                 <p className="text-foreground">Тверь, ул. Луначарского, д. 9, корп. 1</p>
               </div>
               <div>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Время работы</p>
+                <p className="text-foreground">Ежедневно, 7:00 — 22:00</p>
+              </div>
+              <div>
                 <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Формат</p>
                 <p className="text-foreground">Индивидуальные и групповые практики</p>
               </div>
