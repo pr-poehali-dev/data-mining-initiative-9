@@ -5,9 +5,9 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           {/* Logo & Tagline */}
           <div className="md:col-span-4">
-            <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Wabi</p>
+            <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Твоё Место Силы</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Японский минимализм в сочетании со скандинавским теплом.
+              Студия осознанных практик в Твери. Йога, медитации, МФР, пилатес и психология.
             </p>
           </div>
 
@@ -16,16 +16,16 @@ export function Footer() {
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Навигация</p>
             <nav className="flex flex-col gap-3">
               <a href="#philosophy" className="text-sm text-foreground hover:text-sage transition-colors">
-                Философия
+                О нас
               </a>
               <a href="#services" className="text-sm text-foreground hover:text-sage transition-colors">
-                Услуги
+                Практики
               </a>
               <a href="#process" className="text-sm text-foreground hover:text-sage transition-colors">
-                Процесс
+                Расписание
               </a>
               <a href="#contact" className="text-sm text-foreground hover:text-sage transition-colors">
-                Контакты
+                Записаться
               </a>
             </nav>
           </div>
@@ -34,14 +34,11 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Соцсети</p>
             <nav className="flex flex-col gap-3">
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
-                Pinterest
-              </a>
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="https://t.me/PracticeTver/4710" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground hover:text-sage transition-colors">
                 Telegram
+              </a>
+              <a href="https://vk.ru/practicesintver" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground hover:text-sage transition-colors">
+                ВКонтакте
               </a>
             </nav>
           </div>
@@ -63,7 +60,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Wabi Studio. Все права защищены.
+            &copy; {new Date().getFullYear()} Твоё Место Силы. Все права защищены.
           </p>
           <p className="text-xs text-muted-foreground">Создано с намерением</p>
         </div>

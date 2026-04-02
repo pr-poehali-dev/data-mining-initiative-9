@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 const TG_LINK = "https://t.me/PracticeTver/4710"
+const VK_LINK = "https://vk.ru/practicesintver"
 
 export function Contact() {
   const [isVisible, setIsVisible] = useState(false)
@@ -91,22 +92,40 @@ export function Contact() {
                 ))}
               </ul>
 
-              <a
-                href={TG_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500 self-start"
-              >
-                Записаться в Telegram
-                <svg
-                  className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href={TG_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+                  Telegram
+                  <svg
+                    className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a
+                  href={VK_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-8 py-4 border border-sage text-sage text-sm tracking-widest uppercase hover:bg-sage hover:text-primary-foreground transition-all duration-500"
+                >
+                  ВКонтакте
+                  <svg
+                    className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
