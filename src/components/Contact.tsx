@@ -1,13 +1,9 @@
-import type React from "react"
 import { useEffect, useRef, useState } from "react"
+
+const TG_LINK = "https://t.me/PracticeTver/4710"
 
 export function Contact() {
   const [isVisible, setIsVisible] = useState(false)
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -27,16 +23,10 @@ export function Contact() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log(formState)
-  }
-
   return (
     <section ref={sectionRef} id="contact" className="py-32 lg:py-40 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left Column */}
           <div>
             <p
@@ -44,7 +34,7 @@ export function Contact() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Контакты
+              Запись
             </p>
             <h2
               className={`font-serif text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-8 text-balance transition-all duration-1000 delay-200 ${
@@ -58,8 +48,7 @@ export function Contact() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Каждое осмысленное пространство начинается с разговора. Расскажите о вашем видении,
-              и мы вместе найдём способ воплотить его в жизнь.
+              Запишитесь на практику через Telegram — ответим быстро, подберём удобное время и формат: индивидуально или в группе.
             </p>
 
             {/* Contact Info */}
@@ -69,72 +58,46 @@ export function Contact() {
               }`}
             >
               <div>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Почта</p>
-                <a href="mailto:hello@example.com" className="text-foreground hover:text-sage transition-colors">
-                  hello@example.com
-                </a>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Город</p>
+                <p className="text-foreground">Тверь</p>
               </div>
               <div>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Локация</p>
-                <p className="text-foreground">Москва и Санкт-Петербург</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mb-2">Формат</p>
+                <p className="text-foreground">Индивидуальные и групповые практики</p>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Form */}
+          {/* Right Column - CTA */}
           <div
-            className={`transition-all duration-1000 delay-500 ${
+            className={`flex flex-col items-start gap-8 transition-all duration-1000 delay-500 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="w-full p-10 lg:p-14 bg-sand/50 flex flex-col gap-8">
               <div>
-                <label htmlFor="name" className="block text-xs tracking-widest uppercase text-muted-foreground mb-3">
-                  Имя
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formState.name}
-                  onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                  className="w-full bg-transparent border-b border-border py-3 text-foreground placeholder:text-muted-foreground/50 focus:border-sage focus:outline-none transition-colors"
-                  placeholder="Ваше имя"
-                  required
-                />
+                <p className="font-serif text-2xl text-foreground mb-3">Напишите нам в Telegram</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Расскажите, какая практика вас интересует, — поможем выбрать подходящий формат и запишем на удобное время.
+                </p>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-xs tracking-widest uppercase text-muted-foreground mb-3">
-                  Почта
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formState.email}
-                  onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                  className="w-full bg-transparent border-b border-border py-3 text-foreground placeholder:text-muted-foreground/50 focus:border-sage focus:outline-none transition-colors"
-                  placeholder="ваш@email.com"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-xs tracking-widest uppercase text-muted-foreground mb-3">
-                  Сообщение
-                </label>
-                <textarea
-                  id="message"
-                  value={formState.message}
-                  onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                  rows={4}
-                  className="w-full bg-transparent border-b border-border py-3 text-foreground placeholder:text-muted-foreground/50 focus:border-sage focus:outline-none transition-colors resize-none"
-                  placeholder="Расскажите о вашем проекте..."
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500"
+
+              <ul className="space-y-3 text-muted-foreground text-sm">
+                {["Йога и пилатес", "МФР и суставная гимнастика", "Медитации, гонг и чаши", "Триггерный массаж", "Психология и мастер-классы"].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={TG_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500 self-start"
               >
-                Отправить
+                Записаться в Telegram
                 <svg
                   className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
                   fill="none"
@@ -143,8 +106,8 @@ export function Contact() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
-            </form>
+              </a>
+            </div>
           </div>
         </div>
       </div>
