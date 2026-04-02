@@ -98,6 +98,31 @@ export function Services() {
               <p className="text-muted-foreground leading-relaxed">{service.description}</p>
             </div>
           ))}
+
+          {/* Маятниковое тестирование — особая карточка с фото */}
+          <div
+            className={`group relative md:col-span-2 overflow-hidden transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: `${300 + services.length * 150}ms` }}
+          >
+            <div className="relative h-80 md:h-96">
+              <img
+                src="https://cdn.poehali.dev/projects/21761104-a408-4f0e-9e4b-1e3dfd6173f1/bucket/cfedd88e-4f55-4e41-96d5-1650fadb11f5.jpg"
+                alt="Маятниковое тестирование"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+              <div className="absolute inset-0 flex items-center p-10 lg:p-14">
+                <div className="max-w-lg">
+                  <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Маятниковое тестирование</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Древняя практика работы с маятником для получения ответов из глубин подсознания. Помогает в принятии решений, поиске баланса и раскрытии внутренних ресурсов.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
